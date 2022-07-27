@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Regular.woff2') format('woff2'),
+        url('GraphikLCG-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import './reset';
+
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+$grey: #E5E5E5;
+$orange: #FF6336;
+
+
+
+.header {
+    border-bottom: 1px solid $grey;
+    padding: 34px 0 33px;
+
+    &__top-item {
+        @extend %flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__nav-logo {
+        @extend %flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__nav {
+        @extend %flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__nav-txt {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    &__nav-btn {
+        margin-left: 10px;
+    }
+
+    &__btn-1 {
+        max-width: 120px;
+        color: black;
+        background-color: #fff;
+        padding: 0 30px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 45px;
+        text-align: center;
+        border: 1px solid ;
+    }
+     
+    &__btn-2 {
+        max-width: 120px;
+        background-color: $orange;
+        color: white;
+        padding: 0 20px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 45px;
+        text-align: center;
+        border: $orange;
+    }
+}
