@@ -1,10 +1,14 @@
 @font-face {
-    font-family: 'Graphik LCG';
-    src: url('GraphikLCG-Regular.woff2') format('woff2'),
-        url('GraphikLCG-Regular.woff') format('woff');
+    font-family: "Graphik LCG";
+    src: url(../fonts/GraphikLCG-Regular.ttf),
+        url(../fonts/GraphikLCG-Semibold.ttf);
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+body {
+    font-family: 'Graphik LCG', sans-serif;
 }
 
 @import './reset';
@@ -521,16 +525,20 @@ $light-grey: #EEEEEE;
 
     &__wrap {
         padding: 92px 0 48px;
+    }
+
+    &__box-1 {
         @extend %flex;
-        flex-direction: column;
-        gap: 48px;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding-bottom: 95px;
+        gap: 20px;
     }
 
     &__block-1 {
         @extend %flex;
         flex-direction: column;
         justify-content: left;
-        border-bottom: 1px solid black;
         gap: 25px;
     }
 
@@ -554,6 +562,65 @@ $light-grey: #EEEEEE;
     &__link {
         color: black;
         @include font-properties(600, 20px, 30px)
+    }
+
+    &__wrap-item {
+        @extend %flex;
+        gap: 34px;
+    }
+
+    &__block-h4 {
+        @include font-properties(600, 20px, 25px)
+    }
+    
+    &__mini-txt {
+        @include font-properties(400, 15px, 15px)
+    }
+
+    &__block-2,
+    &__block-4,
+    &__block-5 {
+        @extend %flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-right: 10px;
+    }
+
+    &__block-2 {
+        padding-right: 50px;
+    }
+
+    &__block-3 {
+        @extend %flex;
+            flex-direction: column;
+            gap: 15px;
+    }
+
+    &__box-2 {
+        @extend %flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 48px;
+    }
+
+    &__lokalise {
+        @extend %flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    &__lokalise-img {
+        max-width: 90px;
+    }
+
+    &__lokalise-txt {
+        max-width: 300px;
+        @include font-properties(400, 12px, 15px)
+    }
+
+    &__h6,
+    &__privacy-txt {
+        @include font-properties(400, 12px, 15px)
     }
 }
 
