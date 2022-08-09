@@ -34,6 +34,10 @@ $light-grey: #EEEEEE;
 
 
 
+
+
+
+
 .header {
     border-bottom: 1px solid $grey;
     padding: 34px 0 33px;
@@ -68,7 +72,9 @@ $light-grey: #EEEEEE;
     }
 
     &__nav-btn {
-        margin-left: 10px;
+        @extend %flex;
+        flex-direction: row;
+        gap: 10px;
     }
 
     &__btn-1 {
@@ -91,6 +97,73 @@ $light-grey: #EEEEEE;
         border: $orange;
     }
 }
+
+
+@media (max-width: 1023px) {
+    .header {
+        padding: 24px 0 23px;
+    
+        &__top-item {
+            gap: 20px;
+        }
+    
+        &__nav-logo {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        &__nav {
+            gap: 20px;
+        }
+    
+        &__btn-1 {
+            @include font-properties(600, 15px, 45px);
+            max-width: 110px;
+            padding: 0 25px;
+        }
+         
+        &__btn-2 {
+            @include font-properties(600, 15px, 45px);
+            max-width: 100px;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 24px 0 13px;
+    
+        &__top-item {
+            justify-content: center;
+            gap: 20px;
+        }
+    
+        &__nav-logo {
+            align-items: center;
+            gap: 20px;
+        }
+    
+        &__nav {
+            gap: 15px;
+        }
+
+        &__btn-1 {
+            @include font-properties(600, 14px, 45px);
+            max-width: 100px;
+            padding: 0 22px;
+        }
+         
+        &__btn-2 {
+            @include font-properties(600, 14px, 45px);
+            max-width: 90px;
+            padding: 0 12px;
+        }
+    }
+}
+
+
 
 .main {
     padding: 115px 0 140px;
@@ -125,6 +198,7 @@ $light-grey: #EEEEEE;
         @extend %flex;
         flex-direction: row;
         gap: 10px;
+        margin-bottom: 25px;
     }
 
     &__btn-1 {
@@ -136,7 +210,7 @@ $light-grey: #EEEEEE;
         padding: 0 30px;
         text-align: center;
         border: $orange;
-        margin-bottom: 25px;
+        
     }
 
     &__btn-2 {
@@ -158,6 +232,106 @@ $light-grey: #EEEEEE;
         max-width: 600px;
         min-height: 530px;
         width: 100%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .main {
+        padding: 100px 0 90px;
+    
+        &__info {
+            padding-bottom: 50px;
+        }
+    
+        &__block-1 {
+            max-width: 320px;
+        }
+    
+        &__h1 {
+            @include font-properties(600, 50px, 50px);
+            margin-bottom: 40px;
+            max-width: 305px;
+        }
+    
+        &__txt {
+            @include font-properties(400, 20px, 30px);
+            margin-bottom: 25px;
+            max-width: 300px;
+        }   
+
+        &__nav-btn {
+            margin-bottom: 20px;
+        }
+    
+        &__btn-1 {
+            @include font-properties(600, 15px, 45px);
+            max-width: 120px;
+            padding: 0 20px;
+        }
+    
+        &__btn-2 {
+            @include font-properties(600, 15px, 45px);
+            max-width: 120px;
+            padding: 0 10px;
+        }
+    
+        &__txt-sm {
+            @include font-properties(400, 13px, 25px);
+        }
+    
+        &__img {
+            max-width: 400px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main {
+        padding: 50px 0 90px;
+    
+        &__info {
+            padding-bottom: 10px;
+        }
+    
+        &__block-1 {
+            max-width: 320px;
+        }
+    
+        &__h1 {
+            @include font-properties(600, 50px, 50px);
+            margin-bottom: 40px;
+            max-width: 305px;
+        }
+    
+        &__txt {
+            @include font-properties(400, 20px, 30px);
+            margin-bottom: 25px;
+            max-width: 300px;
+        }   
+
+        &__nav-btn {
+            margin-bottom: 20px;
+        }
+    
+        &__btn-1 {
+            @include font-properties(600, 15px, 45px);
+            max-width: 120px;
+            padding: 0 20px;
+        }
+    
+        &__btn-2 {
+            @include font-properties(600, 15px, 45px);
+            max-width: 120px;
+            padding: 0 10px;
+        }
+    
+        &__txt-sm {
+            @include font-properties(400, 13px, 25px);
+        }
+    
+        &__img {
+            max-width: 400px;
+        }
     }
 }
 
@@ -187,10 +361,7 @@ $light-grey: #EEEEEE;
 
 
 
-.section {
-
-    /*section 1 */
-
+.section-1 {
     &__bg-color-1 {
         background-color: $peach;
     }
@@ -217,6 +388,13 @@ $light-grey: #EEEEEE;
         gap: 50px;
         margin-bottom: 90px;
     }
+}
+
+.section {
+
+    /*section 1 */
+
+    
 
 
 
