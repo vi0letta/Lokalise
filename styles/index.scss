@@ -360,8 +360,9 @@ $light-grey: #EEEEEE;
 }
 
 
-
+/*section 1*/
 .section-1 {
+    background-color: #000;
     &__bg-color-1 {
         background-color: $peach;
     }
@@ -390,18 +391,9 @@ $light-grey: #EEEEEE;
     }
 }
 
-.section {
+/*section 2-5*/
 
-    /*section 1 */
-
-    
-
-
-
-    
-    /*section-2*/
-    
-    
+.section-2-5 {
     &__info {
         @extend %content-layot;
         flex-direction: row;
@@ -427,11 +419,11 @@ $light-grey: #EEEEEE;
     &__img {
         @extend %img-layot;
     }
-    
+}
 
 
-    /*section 6*/
-
+/*section 6*/
+.section-6 {
     &__bg-color-6 {
         background-color: $pink;
     }
@@ -473,9 +465,11 @@ $light-grey: #EEEEEE;
         @include font-properties(400, 18px, 25px);
     }
 
+}
 
-    /*section 7*/
 
+/*section-7*/
+.section-7 {
     &__white-card-headline {
         @include font-properties(600, 50px, 60px);
         text-align: left;
@@ -575,9 +569,8 @@ $light-grey: #EEEEEE;
     }
 }
 
-.section {
+.section-8 {
 
-    /*section 8*/
 
     &__bgc-brown {
         background-color: $brown;
@@ -638,10 +631,9 @@ $light-grey: #EEEEEE;
     &__brown-block-txt {
         @include font-properties(400, 15px, 25px);
     }
+}
 
-
-    /*secrion 9*/
-
+.section-9 {
     &__info-wrap {
         @extend %flex;
         flex-direction: column;
@@ -674,8 +666,12 @@ $light-grey: #EEEEEE;
         @include font-properties(600, 16px, 60px);
         border: none;
     }
+}
 
-    /*section 10*/ 
+.section-10 {
+    &__bg-color {
+        background-color: $peach;
+    }
 
     &__middle-wrap {
         @extend %flex;
@@ -692,6 +688,16 @@ $light-grey: #EEEEEE;
         color: white;
         background-color: black;
         @include font-properties(600, 17px, 60px);
+    }
+
+    &__heading-h2 {
+        max-width: 791px;
+        @include font-properties(600, 65px, 75px);
+    }
+
+    &__txt-middle {
+        max-width: 539px;
+        @include font-properties(400, 25px, 30px);
     }
 }
 
