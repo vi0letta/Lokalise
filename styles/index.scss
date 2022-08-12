@@ -115,6 +115,7 @@ $light-grey: #EEEEEE;
 
         &__nav {
             gap: 20px;
+            justify-content: center;
         }
     
         &__btn-1 {
@@ -235,12 +236,13 @@ $light-grey: #EEEEEE;
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1030px) {
     .main {
         padding: 100px 0 90px;
     
         &__info {
             padding-bottom: 50px;
+            justify-content: center;
         }
     
         &__block-1 {
@@ -281,56 +283,30 @@ $light-grey: #EEEEEE;
     
         &__img {
             max-width: 400px;
+        }
+    }
+}
+
+@media (min-width: 768px ) and (max-width: 1209px) {
+    .main {
+        &__img {
+            max-width: 450px;
         }
     }
 }
 
 @media (max-width: 767px) {
+
     .main {
         padding: 50px 0 90px;
     
         &__info {
             padding-bottom: 10px;
-        }
-    
-        &__block-1 {
-            max-width: 320px;
-        }
-    
-        &__h1 {
-            @include font-properties(600, 50px, 50px);
-            margin-bottom: 40px;
-            max-width: 305px;
-        }
-    
-        &__txt {
-            @include font-properties(400, 20px, 30px);
-            margin-bottom: 25px;
-            max-width: 300px;
-        }   
-
-        &__nav-btn {
-            margin-bottom: 20px;
-        }
-    
-        &__btn-1 {
-            @include font-properties(600, 15px, 45px);
-            max-width: 120px;
-            padding: 0 20px;
-        }
-    
-        &__btn-2 {
-            @include font-properties(600, 15px, 45px);
-            max-width: 120px;
-            padding: 0 10px;
-        }
-    
-        &__txt-sm {
-            @include font-properties(400, 13px, 25px);
+            justify-content: center;
         }
     
         &__img {
-            max-width: 400px;
+            max-width: 420px;
         }
     }
 }
@@ -338,45 +314,26 @@ $light-grey: #EEEEEE;
 
 
 
-/*content*/
-%content-layot {
-    @extend %flex;
-    justify-content: space-between;
-    padding: 130px 0;
-    gap: 40px;
-}
-
-%txt-layot {
-    @extend %flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-}
-
-%img-layot {
-    max-width: 632px;
-    width: 100%;
-}
-
-
 /*section 1*/
+
 .section-1 {
-    background-color: #000;
     &__bg-color-1 {
         background-color: $peach;
     }
     
-    &__info-1 {
+    &__info {
         @extend %flex;
         flex-direction: column;
         align-items: center;
         padding: 10px 30px;
     }
 
-    &__h1-1 {
+    &__h1 {
         padding-top: 90px;
         padding-bottom: 70px;
+        justify-content: center;
+        text-align: center;
+        max-width: 620px;
         @include font-properties(600, 50px, 60px);
     }
 
@@ -384,23 +341,68 @@ $light-grey: #EEEEEE;
         @extend %flex;
         flex-direction: row;
         align-items: center;
-        min-height: 53px;
         max-width: 1290px;
         gap: 50px;
         margin-bottom: 90px;
     }
 }
 
+@media (max-width: 1023px) {
+
+    .section-1 {
+
+        &__info {
+            padding: 0 30px;
+        }
+    
+        &__h1 {
+            @include font-properties(600, 35px, 60px);
+        }
+    
+        &__logo-box {
+            justify-content: center;
+            max-width: 1290px;
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .section-1 {
+    
+        &__h1 {
+            @include font-properties(600, 30px, 60px);
+        }
+    
+        &__logo-box {
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+
+
 /*section 2-5*/
 
 .section-2-5 {
     &__info {
-        @extend %content-layot;
+        @extend %flex;
+        justify-content: space-between;
+        padding: 130px 0;
+        gap: 40px;
         flex-direction: row;
     }
 
     &__section-txt {
-        @extend %txt-layot;
+        @extend %flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
     }
     
     &__h1 {
@@ -417,12 +419,76 @@ $light-grey: #EEEEEE;
     }
     
     &__img {
-        @extend %img-layot;
+        max-width: 632px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .section-2-5 {
+        &__info {
+            justify-content: center;
+            padding: 120px 0;
+            gap: 30px;
+        }
+        
+        &__h1 {
+            @include font-properties(600, 40px, 50px)
+        }
+        
+        &__txt {
+            max-width: 320px;
+            @include font-properties(400, 15px, 30px)
+        }
+        
+         &__h5 {
+            @include font-properties(600, 15px, 30px)
+        }
+        
+        &__img {
+            max-width: 432px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .section-2-5 {
+        &__info {
+            justify-content: center;
+            padding: 100px 0;
+            gap: 30px;
+            border-top: 3px solid $grey;
+        }
+
+        
+        &__h1 {
+            @include font-properties(600, 35px, 50px)
+        }
+        
+        &__txt {
+            max-width: 320px;
+            @include font-properties(400, 10px, 30px)
+        }
+        
+         &__h5 {
+            @include font-properties(600, 10px, 30px)
+        }
+        
+        &__img {
+            max-width: 432px;
+            width: 100%;
+        }
     }
 }
 
 
+
+
 /*section 6*/
+
 .section-6 {
     &__bg-color-6 {
         background-color: $pink;
@@ -468,7 +534,56 @@ $light-grey: #EEEEEE;
 }
 
 
+
+@media (max-width: 1023px) {
+    .section-6 {
+    
+        &__card-headline {
+            padding: 100px 0 50px;
+            @include font-properties(600, 40px, 60px);
+        }
+    
+        &__cards {
+            justify-content: center;
+            gap: 90px;
+            padding-bottom: 80px;
+        }
+    
+        &__card {
+            max-width: 300px;
+            width: 100%;
+            gap: 22px;
+        }
+    
+        &__card-img {
+            max-width: 160px;
+            min-height: 120px;
+        }
+    
+        &__headline-sm {
+            @include font-properties(600, 25px, 35px);
+        }
+    
+        &__card-txt {
+            @include font-properties(400, 18px, 25px);
+        }
+    
+    }
+}
+
+@media (max-width: 767px) {
+    .section-6 {
+    
+        &__card-headline {
+            @include font-properties(600, 35px, 60px);
+        }
+    
+    }
+}
+
+
 /*section-7*/
+
 .section-7 {
     &__white-card-headline {
         @include font-properties(600, 50px, 60px);
@@ -516,6 +631,7 @@ $light-grey: #EEEEEE;
     }
 
     &__white-card-txt {
+        max-width: 415px;
         @include font-properties(400, 20px, 30px);
     }
     
@@ -525,7 +641,66 @@ $light-grey: #EEEEEE;
         color: black;
         margin-top: 25px;
     }
+}
 
+@media (max-width: 1023px) {
+    .section-7 {
+        &__white-card-headline {
+            @include font-properties(600, 40px, 60px);
+            padding: 110px 0 25px;
+            text-align: center;
+        }
+
+        &__white-cards {
+            justify-content: center;
+        }
+    
+        &__white-card {
+            max-width: 420px;
+            width: 100%;
+            padding-top: 20px;
+            align-items: center;
+        }
+    
+        &__white-card-img1 {
+            margin-bottom: 45px;
+        }
+    
+        &__white-card-img2 {
+            margin-bottom: 46px;
+        }
+    
+        &__white-card-img3 {
+            margin-bottom: 46px;
+        }
+    
+        &__white-card-txt {
+            @include font-properties(400, 18px, 30px);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-7 {
+        &__white-card-headline {
+            @include font-properties(600, 35px, 60px);
+            padding: 100px 0 25px;
+        }
+
+        &__white-card {
+            align-items: center;
+            padding-bottom: 30px;
+        }
+    
+        &__white-card-txt {
+            @include font-properties(400, 18px, 30px);
+        }
+        
+        &__card-link {
+            @include font-properties(400, 20px, 30px);
+            margin-top: 25px;
+        }
+    }
 }
 
 
@@ -569,9 +744,32 @@ $light-grey: #EEEEEE;
     }
 }
 
+@media (max-width: 1023px) {
+    .article {
+        &__info {
+            flex-direction: column-reverse;
+        }
+    
+        &__txt {
+            @include font-properties(400, 25px, 35px);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .article {
+        &__txt {
+            @include font-properties(400, 20px, 35px);
+        }
+    }
+}
+
+
+
+
+/*section 8*/
+
 .section-8 {
-
-
     &__bgc-brown {
         background-color: $brown;
     }
@@ -633,6 +831,55 @@ $light-grey: #EEEEEE;
     }
 }
 
+@media (max-width: 1023px) {
+    .section-8 {
+        &__rate-wrap {
+            gap: 40px;
+            padding: 60px 0 70px;
+            justify-content: center;
+        }
+    
+        &__img-txt {
+            gap: 40px;
+        }
+    
+        &__cake {
+            max-width: 150px;
+        }
+    
+        &__bold-txt {
+            max-width: 400px;
+            @include font-properties(600, 30px, 50px)
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-8 {
+        &__rate-wrap {
+            justify-content: center;
+        }
+    
+        &__img-txt {
+            justify-content: center;
+            text-align: center;
+        }
+    
+        &__bold-txt {
+            @include font-properties(600, 25px, 50px)
+        }
+
+        &__rate {
+            justify-content: center;
+        }
+    }
+}
+
+
+
+
+/*section 9*/
+
 .section-9 {
     &__info-wrap {
         @extend %flex;
@@ -668,6 +915,40 @@ $light-grey: #EEEEEE;
     }
 }
 
+@media (max-width:1023px) {
+    .section-9 {
+        &__info-wrap {
+            padding: 150px 0 120px;
+        }
+    
+        &__heading-h2 {
+            max-width: 780px;
+            @include font-properties(600, 50px, 75px);
+        }
+    
+        &__txt-middle {
+            @include font-properties(400, 20px, 30px);
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .section-9 {
+        &__info-wrap {
+            padding: 120px 0 100px;
+        }
+    
+        &__heading-h2 {
+            max-width: 750px;
+            @include font-properties(600, 40px, 75px);
+        }
+    }
+}
+
+
+
+/*section 10*/
+
 .section-10 {
     &__bg-color {
         background-color: $peach;
@@ -701,6 +982,35 @@ $light-grey: #EEEEEE;
     }
 }
 
+@media (max-width: 1023px) {
+    .section-10 {
+    
+        &__middle-wrap {
+            padding: 150px 0 150px;
+        }
+    
+        &__heading-h2 {
+            max-width: 650px;
+            @include font-properties(600, 50px, 75px);
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .section-10 {
+    
+        &__middle-wrap {
+            padding: 140px 0 140px;
+        }
+    
+        &__heading-h2 {
+            max-width: 600px;
+            @include font-properties(600, 45px, 75px);
+        }
+    }
+}
+
+
 .footer {
 
     &__bgc {
@@ -732,6 +1042,7 @@ $light-grey: #EEEEEE;
 
     &__img {
         max-width: 300px;
+        width: 100%;
     }
 
     &__mini-logo {
