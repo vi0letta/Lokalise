@@ -174,25 +174,24 @@ $light-grey: #EEEEEE;
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 100px;
+        align-items: center;
     }
 
     &__block-1 {
         @extend %flex;
         flex-direction: column;
         text-align: left;
-        max-width: 620px;
+        max-width: 552px;
     }
 
     &__h1 {
         @include font-properties(600, 65px, 70px);
         margin-bottom: 50px;
-        max-width: 550px;
     }
 
     &__txt {
         @include font-properties(400, 25px, 35px);
         margin-bottom: 30px;
-        max-width: 471px;
     }
 
     &__nav-btn {
@@ -231,8 +230,28 @@ $light-grey: #EEEEEE;
 
     &__img {
         max-width: 600px;
-        min-height: 530px;
         width: 100%;
+    }
+}
+
+@media (max-width: 1211px) {
+    .main {
+        &__block-1 {
+            max-width: 500px;
+        }
+
+        &__img {
+            max-width: 500px;
+        }
+    }
+}
+
+@media (max-width:1060px) {
+    .main {
+
+        &__img {
+            max-width: 450px;
+        }
     }
 }
 
@@ -242,23 +261,18 @@ $light-grey: #EEEEEE;
     
         &__info {
             padding-bottom: 50px;
+            gap: 30px;
             justify-content: center;
-        }
-    
-        &__block-1 {
-            max-width: 320px;
         }
     
         &__h1 {
             @include font-properties(600, 50px, 50px);
-            margin-bottom: 40px;
-            max-width: 305px;
+            margin-bottom: 30px;
         }
     
         &__txt {
             @include font-properties(400, 20px, 30px);
             margin-bottom: 25px;
-            max-width: 300px;
         }   
 
         &__nav-btn {
@@ -279,6 +293,7 @@ $light-grey: #EEEEEE;
     
         &__txt-sm {
             @include font-properties(400, 13px, 25px);
+            margin-bottom: 0;
         }
     
         &__img {
@@ -287,10 +302,10 @@ $light-grey: #EEEEEE;
     }
 }
 
-@media (min-width: 768px ) and (max-width: 1209px) {
+@media (max-width: 989px) {
     .main {
         &__img {
-            max-width: 450px;
+            max-width: 600px;
         }
     }
 }
@@ -303,10 +318,6 @@ $light-grey: #EEEEEE;
         &__info {
             padding-bottom: 10px;
             justify-content: center;
-        }
-    
-        &__img {
-            max-width: 420px;
         }
     }
 }
@@ -328,7 +339,7 @@ $light-grey: #EEEEEE;
         padding: 10px 30px;
     }
 
-    &__h1 {
+    &__h2 {
         padding-top: 90px;
         padding-bottom: 70px;
         justify-content: center;
@@ -355,7 +366,7 @@ $light-grey: #EEEEEE;
             padding: 0 30px;
         }
     
-        &__h1 {
+        &__h2 {
             @include font-properties(600, 35px, 60px);
         }
     
@@ -372,7 +383,7 @@ $light-grey: #EEEEEE;
 
     .section-1 {
     
-        &__h1 {
+        &__h2 {
             @include font-properties(600, 30px, 60px);
         }
     
@@ -403,9 +414,10 @@ $light-grey: #EEEEEE;
         justify-content: center;
         align-items: flex-start;
         gap: 30px;
+        max-width: 510px;
     }
     
-    &__h1 {
+    &__h2 {
         @include font-properties(600, 50px, 60px)
     }
     
@@ -414,7 +426,7 @@ $light-grey: #EEEEEE;
         @include font-properties(400, 20px, 30px)
     }
     
-     &__h5 {
+     &__link {
         @include font-properties(600, 20px, 30px)
     }
     
@@ -424,26 +436,45 @@ $light-grey: #EEEEEE;
     }
 }
 
+@media (max-width: 1242px) {
+    .section-2-5 {
+        &__img {
+            max-width: 520px;
+        }
+    }
+}
+
+@media (max-width: 1130px) {
+    .section-2-5 {
+        &__section-txt {
+            max-width: 460px;
+        }
+        
+        &__h2 {
+            @include font-properties(600, 45px, 60px)
+        }
+
+        &__img {
+            max-width: 460px;
+        }
+    }
+}
+
 @media (max-width: 1023px) {
 
     .section-2-5 {
         &__info {
             justify-content: center;
-            padding: 120px 0;
+            padding: 45px 0;
             gap: 30px;
         }
         
-        &__h1 {
-            @include font-properties(600, 40px, 50px)
+        &__h2 {
+            @include font-properties(600, 38px, 50px);
         }
         
-        &__txt {
-            max-width: 320px;
-            @include font-properties(400, 15px, 30px)
-        }
-        
-         &__h5 {
-            @include font-properties(600, 15px, 30px)
+         &__link {
+            @include font-properties(600, 15px, 30px);
         }
         
         &__img {
@@ -453,33 +484,24 @@ $light-grey: #EEEEEE;
     }
 }
 
-@media (max-width: 767px) {
-
+@media (max-width: 982px) {
     .section-2-5 {
-        &__info {
-            justify-content: center;
-            padding: 100px 0;
-            gap: 30px;
-            border-top: 3px solid $grey;
+        &__reverse {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
         }
 
-        
-        &__h1 {
-            @include font-properties(600, 35px, 50px)
+        &__section-txt {
+            padding-left: 15px;
         }
-        
-        &__txt {
-            max-width: 320px;
-            @include font-properties(400, 10px, 30px)
-        }
-        
-         &__h5 {
-            @include font-properties(600, 10px, 30px)
-        }
-        
-        &__img {
-            max-width: 432px;
-            width: 100%;
+    } 
+}
+
+@media (max-width: 767px) {
+    .section-2-5 {
+        &__h2 {
+            @include font-properties(600, 33px, 50px);
         }
     }
 }
@@ -726,6 +748,7 @@ $light-grey: #EEEEEE;
     &__txt {
         @include font-properties(400, 30px, 40px);
         max-width: 920px;
+        
     }
 
     &__txt-sm {
@@ -744,12 +767,21 @@ $light-grey: #EEEEEE;
     }
 }
 
-@media (max-width: 1023px) {
-    .article {
+@media (max-width: 1320px) {
+    .article{
         &__info {
             flex-direction: column-reverse;
+            align-items: center;
         }
     
+        &__txt-content {
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .article {
         &__txt {
             @include font-properties(400, 25px, 35px);
         }
@@ -831,12 +863,19 @@ $light-grey: #EEEEEE;
     }
 }
 
+@media (max-width: 1185px) {
+    .section-8 {
+        &__rate-wrap {
+            justify-content: center;
+        }
+    }
+}
+
 @media (max-width: 1023px) {
     .section-8 {
         &__rate-wrap {
             gap: 40px;
             padding: 60px 0 70px;
-            justify-content: center;
         }
     
         &__img-txt {
