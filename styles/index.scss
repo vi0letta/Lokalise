@@ -1,3 +1,4 @@
+@use "sass:math";
 @font-face {
     font-family: "Graphik LCG";
     src: url(../fonts/GraphikLCG-Regular.ttf),
@@ -32,8 +33,12 @@ $blue: #C9E8F2;
 $brown: #DABC98;
 $light-grey: #EEEEEE;
 
-
-
+$sm: 576px;
+$md: 767px;
+$lg: 1200px;
+$gutter-col: 15px;
+$grid-col-count: 12;
+$grid-col-size: math.div(100%, $grid-col-count);
 
 
 
@@ -525,6 +530,8 @@ $light-grey: #EEEEEE;
     &__cards {
         @extend %flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         gap: 110px;
         padding-bottom: 95px;
 
@@ -618,6 +625,7 @@ $light-grey: #EEEEEE;
         flex-direction: row;
         padding-bottom: 95px;
         align-items: baseline;
+        justify-content: center;
     }
 
     &__white-card {
@@ -1158,5 +1166,41 @@ $light-grey: #EEEEEE;
     }
 }
 
+@for $i from 1 through $grid-col-count {
+    .col-#{$i} {
+        flex: 0 0 auto;
+        width: $grid-col-size * $i;
+        padding: $gutter-col $gutter-col 0;
+    }
+}
 
+@media all and (min-width:$sm ) {
+    @for $i from 1 through $grid-col-count {
+        .col-sm-#{$i} {
+            flex: 0 0 auto;
+            width: $grid-col-size * $i;
+            padding: $gutter-col $gutter-col 0;
+        }
+    }
+}
+
+@media all and (min-width:$md ) {
+    @for $i from 1 through $grid-col-count {
+        .col-md-#{$i} {
+            flex: 0 0 auto;
+            width: $grid-col-size * $i;
+            padding: $gutter-col $gutter-col 0;
+        }
+    }
+}
+
+@media all and (min-width:$lg ) {
+    @for $i from 1 through $grid-col-count {
+        .col-lg-#{$i} {
+            flex: 0 0 auto;
+            width: $grid-col-size * $i;
+            padding: $gutter-col $gutter-col 0;
+        }
+    }
+}
     
